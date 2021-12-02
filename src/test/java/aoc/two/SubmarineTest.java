@@ -40,7 +40,6 @@ class SubmarineTest {
         assertEquals(1815044, unit.cruise(input));
     }
 
-
     @Test
     void testCruiseWithAim() {
         assertEquals(900, unit.cruiseWithAim(test));
