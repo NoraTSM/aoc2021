@@ -1,13 +1,12 @@
-package aoc.first;
+package aoc.one;
 
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class DepthDetectorTest {
 
@@ -29,7 +28,7 @@ class DepthDetectorTest {
                 """;
 
     @BeforeAll
-    public static void setup() throws IOException {
+    static void setup() throws IOException {
         FileInputStream fileInputStream = new FileInputStream("src/test/java/resources/depth1.txt");
         byte[] bytes = fileInputStream.readAllBytes();
         input = new String(bytes);
@@ -37,33 +36,23 @@ class DepthDetectorTest {
 
 
     @Test
-    public void testDepth_test() {
-
-        assertEquals(unit.depth(test), 7);
+    void testDepth_test() {
+        assertEquals(7, unit.depth(test));
     }
 
     @Test
-    public void testDepth_input() {
-
-        assertEquals(unit.depth(input), 1387);
-
-
+    void testDepth_input() {
+        assertEquals(1387, unit.depth(input));
     }
 
     @Test
-    public void testDepthWindowed_test() {
-
-        assertEquals(unit.depth_windowed(test), 5);
-
+    void testDepthWindowed_test() {
+        assertEquals(5, unit.depthWindowed(test));
     }
 
     @Test
-    public void testDepthWindowed_input() {
-
-
-        assertEquals(unit.depth_windowed(input), 1362);
-
-
+    void testDepthWindowed_input() {
+        assertEquals(1362, unit.depthWindowed(input));
     }
 
 

@@ -1,13 +1,12 @@
 package aoc.two;
 
-import aoc.first.DepthDetector;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SubmarineTest {
 
@@ -25,30 +24,30 @@ class SubmarineTest {
                 """;
 
     @BeforeAll
-    public static void setup() throws IOException {
+    static void setup() throws IOException {
         FileInputStream fileInputStream = new FileInputStream("src/test/java/resources/navigation2.txt");
         byte[] bytes = fileInputStream.readAllBytes();
         input = new String(bytes);
     }
 
     @Test
-    public void testCruise() {
-        assertEquals(unit.cruise(test), 150);
+    void testCruise() {
+        assertEquals(150, unit.cruise(test));
     }
 
     @Test
-    public void testCruise_input() {
-        assertEquals(unit.cruise(input), 1815044);
+    void testCruise_input() {
+        assertEquals(1815044, unit.cruise(input));
     }
 
 
     @Test
-    public void testCruiseWithAim() {
-        assertEquals(unit.cruiseWithAim(test), 900);
+    void testCruiseWithAim() {
+        assertEquals(900, unit.cruiseWithAim(test));
     }
 
     @Test
-    public void testCruiseWithAim_input() {
-        assertEquals(unit.cruiseWithAim(input), 1739283308);
+    void testCruiseWithAim_input() {
+        assertEquals(1739283308, unit.cruiseWithAim(input));
     }
 }

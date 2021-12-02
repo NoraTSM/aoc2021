@@ -1,4 +1,4 @@
-package aoc.first;
+package aoc.one;
 
 import org.eclipse.collections.api.factory.Lists;
 import org.eclipse.collections.api.list.primitive.IntList;
@@ -15,7 +15,7 @@ public class DepthDetector {
         });
         return result[0];
     }
-    public int depth_windowed(String input) {
+    public int depthWindowed(String input) {
         IntList data = Lists.immutable.with(input.split("\n")).collectInt(Integer::parseInt);
         final int[] result = {0};
         final int[] previous = {0};
