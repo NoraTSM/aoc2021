@@ -10,7 +10,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SubmarineTest {
 
-
     private static String input;
     Submarine unit = new Submarine();
 

@@ -10,7 +10,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class DepthDetectorTest {
 
-
     private static String input;
     DepthDetector unit = new DepthDetector();
 
