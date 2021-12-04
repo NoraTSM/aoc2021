@@ -28,9 +28,8 @@ class DepthDetectorTest {
 
     @BeforeAll
     static void setup() throws IOException {
-        FileInputStream fileInputStream = new FileInputStream("src/test/java/resources/depth1.txt");
-        byte[] bytes = fileInputStream.readAllBytes();
-        input = new String(bytes);
+        FileInputStream fileInputStream = new FileInputStream("src/test/java/resources/1.txt");
+        input = new String(fileInputStream.readAllBytes());
     }
 
 
@@ -53,6 +52,4 @@ class DepthDetectorTest {
     void testDepthWindowed_input() {
         assertEquals(1362, unit.depthWindowed(input));
     }
-
-
 }

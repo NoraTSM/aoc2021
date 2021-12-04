@@ -24,9 +24,8 @@ class SubmarineTest {
 
     @BeforeAll
     static void setup() throws IOException {
-        FileInputStream fileInputStream = new FileInputStream("src/test/java/resources/navigation2.txt");
-        byte[] bytes = fileInputStream.readAllBytes();
-        input = new String(bytes);
+        FileInputStream fileInputStream = new FileInputStream("src/test/java/resources/2.txt");
+        input = new String(fileInputStream.readAllBytes());
     }
 
     @Test
