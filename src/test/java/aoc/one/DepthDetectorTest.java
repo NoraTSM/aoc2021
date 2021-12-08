@@ -32,7 +32,6 @@ class DepthDetectorTest {
         input = new String(fileInputStream.readAllBytes());
     }
 
-
     @Test
     void testDepth_test() {
         assertEquals(7, unit.depth(test));
